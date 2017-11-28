@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Practicando HTML</title>
+	<link rel="stylesheet" href="css/index.css"/>
+</head>
+<body>
+<p id="clock"></p>
+	<header id="header">	<!--header-->
+		<figure><!--logotipo-->
+			<img src="img/logo.png" alt="Zona Industrial logotipo" width="186" height="60" />
+		</figure>
+		<nav><!--menu-->
+			<ul>
+				<li>
+					<a href="index.html">Home</a>
+				</li>
+				<li>
+					<a href="precios.html" target="_blank">Precios</a>
+				</li>
+				<li>
+				<a href="#guitarras">Guitarras</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<section id="portada">	<!--portada-->
+	<h1>INDUSTRIAL BLOG</h1><!--titulo-->
+	<h3>Compra lo que necesites para tu casa</h3><!--resumen-->
+	<button>Conoce más</button><!--boton-->
+	</section>
+	<section id="guitarras">	<!--guitarras-->
+		<h2>Nuestros Productos</h2><!--Titulo-->
+		<article><!--guitarra1-->
+			<img src="img/mesa_redonda.JPG" width="180" height="200" alt="Mesa Redonda"/>
+			<h3>Mesa Circular</h3>
+			<ol>
+				<li>Circular</li>
+				<li>Familiar</li>
+				<li>Caova</li>
+			</ol>
+		</article>
+		<article><!--guitarra2-->
+			<img src="img/mona_lisa.png" width="180" height="200" alt="Mona lisa"/>
+			<h3>Cuadro de Monaliza</h3>
+			<ol>
+				<li>Cuadro Minimalista</li>
+				<li>antiguedad 350 a.c.</li>
+				<li>oleo</li>
+			</ol>
+		</article>
+		
+	</section>
+	<section class="container">
+		<table>
+			<thead>
+				<th>NOMBRE</th>
+				<th>APELLIDO</th>
+				<th>DNI</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td>ALBERT JESUS</td>
+					<td>SILVA ANTAYHUA</td>
+					<td>73176574</td>
+				</tr>
+				<tr>
+					<td>ALEXEI</td>
+					<td>ROJAS CHAVEZ</td>
+					<td>78945148</td>
+				</tr>
+				<tr>
+					<td>DIEGO</td>
+					<td>HUAMAN ARANCIBIA</td>
+					<td>04518756</td>
+				</tr>
+				<tr>
+					<td>DENNIS</td>
+					<td>ESTRADA NORIEGA</td>
+					<td>03456845</td>
+				</tr>
+			</tbody>
+		</table>
+	</section>
+	<script type="text/javascript">
+		function saluda(){
+			
+				let now=new Date()
+				var tiempoRestante= (new Date('Dec 15 2017 00:00:00 GMT-0500')-now+1000)/1000;
+				let segundos=('0'+Math.floor(tiempoRestante%60)).slice(-2);
+				let minutos=('0'+Math.floor(tiempoRestante/60 %60)).slice(-2);
+				let horas=('0'+Math.floor(tiempoRestante/3600%24)).slice(-2);
+				
+				let dias=Math.floor(tiempoRestante/(3600*24));
+
+				console.log(`${dias}d >> ${horas}h:${minutos}m:${segundos}s`);
+				const el =document.getElementById('clock');
+				var t=`${dias}d >> ${horas}h:${minutos}m:${segundos}s`;
+				el.innerHTML=t;
+
+		}
+
+		var t= setInterval(()=>{
+			saluda();
+		},1000);
+
+
+	</script>
+
+</body>
+</html>

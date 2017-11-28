@@ -1,0 +1,42 @@
+/*
+tipo de selector{
+	propiedad:valor;
+	propiedad2: valor;
+}
+*/
+/*selector universal toda la pagina*/
+/*{
+	border:1px solid red;
+	margin:10px;
+}
+/*por tipo de selector*/
+header{
+	background: blue;
+}
+.container{
+	width: 800px;
+	margin:auto;
+
+}
+table{
+	width: 100%;
+}
+thead{
+	background-color: #42A5F5;
+}
+
+th{
+	padding: 5px 18px;
+	text-align: left;
+}
+td{
+	padding: 18px;
+}
+table,th,td{
+	border: 1px solid #1E88E5;
+	border-collapse: collapse;
+}
+table tbody tr:hover{
+	background-color: #1E88E5;
+	color: white; 
+}
